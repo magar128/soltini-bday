@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY BIRTHDAY SOLTINI! 🎉</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+            margin: 0;
+            padding: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 3.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .name-3d {
+            font-size: 4.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: white;
+            text-shadow: 3px 3px 0px #ff0055, 6px 6px 0px #bb0044, 9px 9px 0px #770033;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: white;
+            color: #ff758c;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+            box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.4);
+        }
+
+        .button:hover {
+            background-color: #ff7eb3;
+            color: white;
+            box-shadow: 0px 5px 25px rgba(255, 255, 255, 0.6);
+        }
+
+        /* Fixed Surprise Box */
+        .surprise-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.95);
+            color: #ff0055;
+            padding: 25px;
+            width: 85%;
+            max-width: 450px;
+            border-radius: 15px;
+            text-align: center;
+            display: none;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translate(-50%, -55%); }
+            to { opacity: 1; transform: translate(-50%, -50%); }
+        }
+
+        .surprise-message {
+            font-size: 1.4em;
+            font-weight: bold;
+            line-height: 1.6;
+            padding: 10px;
+        }
+
+        .signature {
+            font-size: 1.2em;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #ff0055;
+            text-shadow: 0 0 10px yellow, 0 0 20px orange;
+        }
+
+        .close-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 1em;
+            font-weight: bold;
+            background: #ff0055;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            background: #bb0044;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>🎉 HAPPY BIRTHDAY</h1>
+    <h2 class="name-3d">SOLTINI</h2>
+
+    <button class="button" onclick="showSurprise()">CLICK FOR SURPRISE! 🎁</button>
+
+    <!-- Surprise Message Container -->
+    <div class="surprise-container" id="surpriseContainer">
+        <p class="surprise-message">
+            🎂 HAPPY BIRTHDAY, SOLTINI! 🎉  
+            MAY YOUR DAY BE FILLED WITH LOVE, HAPPINESS, AND PROSPERITY.  
+            KEEP SMILING, KEEP SHINING, AND MAY ALL YOUR DREAMS COME TRUE!  
+            ❤️ BEST WISHES TO YOU ON YOUR SPECIAL DAY! 🎁
+        </p>
+        <p class="signature">— WISH BY @MAGAR_ON_IG</p>
+        <button class="close-btn" onclick="hideSurprise()">CLOSE</button>
+    </div>
+
+    <script>
+        function showSurprise() {
+            document.getElementById("surpriseContainer").style.display = "block";
+        }
+
+        function hideSurprise() {
+            document.getElementById("surpriseContainer").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
